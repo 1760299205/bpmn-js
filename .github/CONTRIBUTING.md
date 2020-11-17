@@ -67,6 +67,37 @@ In addition to our automatically enforced [lint rules](https://github.com/bpmn-i
 
 __Rationale:__ People should be able to consume parts of the library with an ES module aware bundler such as [Webpack](https://webpack.js.org/) or [Rollup](https://rollupjs.org) without the need to use a transpiler such as [Babel](https://babeljs.io/).
 
+### Unit Tests
+
+In order to retrieve a sign-off for your contribution, it needs to be sufficiently and well tested. Please structure your unit tests into [**given**, **when** and **then**](https://gist.github.com/nikku/1dc2edb553565238c7bf). To increase overall readability and understandability please also leave two empty lines between single tests (`it`-blocks) as well as two empty lines between single tests (`it`-blocks) and setup blocks. Also see this example:
+
+```
+setup();
+
+moreSetup();
+
+
+describe('...', function() {
+
+  setup();
+
+  moreSetup();
+
+
+  it('should ...');
+
+
+  it('should ...');
+
+
+  describe('...', function() {
+
+    it('should ...');
+
+  });
+
+});
+```
 
 ### Creating a Pull Request
 
